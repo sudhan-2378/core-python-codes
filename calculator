@@ -1,0 +1,43 @@
+name = input("Please enter your name: ")
+
+def greet(name):
+    print("Hello!", name)
+
+greet(name)
+print()
+
+def add(x, y):
+    print(x, "+", y, "=", x + y)
+    
+def subtract(x, y):
+    print(x, "-", y, "=", x - y)
+    
+def multiply(x, y):
+    print(x, "X", y, "=", x * y)
+    
+def divide(x, y):
+    if y == 0:
+        print("Oops! 0 (zero) can't be used as a divisor")
+    else:
+        print(x, "/", y, "=", x / y)
+        
+print("Welcome to Sudhan's Calculator")
+print("Which method do you want to choose:")
+methods = ["1. Addition", "2. Subtraction", "3. Multiplication", "4. Division"]
+print("\n".join(methods))
+choice = input("Enter your choice (1 / 2 / 3 / 4): ")
+print()
+number1 = float(input("Please enter your first number: "))
+number2 = float(input("Please enter your second number: "))
+print()
+
+if choice == "1":
+    add(number1, number2)
+elif choice == "2":
+    subtract(number1, number2)
+elif choice == "3":
+    multiply(number1, number2)
+elif choice == "4":
+    divide(number1, number2)
+else:
+    print("Invalid method chosen")
