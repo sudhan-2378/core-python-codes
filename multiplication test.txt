@@ -1,0 +1,24 @@
+import random
+
+print("welcome to the multiplication test !!")
+print()
+score = 0
+missed = 0
+questions = int(input("how many times you wanted to be tested: "))
+print()
+
+for i in range(questions):
+	num1 = random.randint(1, 11)
+	num2 = random.randint(1, 11)
+	print(num1, "x", num2,"=")
+	answer = int(input())
+	correct_answer = num1 * num2
+	if answer == correct_answer:
+		score += 1
+	elif answer != correct_answer:
+		score += 0
+	else:
+		missed += 1
+print("no of questions attempted :", questions)
+print("your score is :", score)
+print("missed one :", missed)
