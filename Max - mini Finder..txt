@@ -1,0 +1,18 @@
+print("Welcome to Max - mini Finder...")
+print("Please enter how many numbers you want to enter:")
+
+time = int(input("Enter: "))
+
+greatest = 0
+smallest = 0
+
+for i in range(time):
+    number = float(input("Enter your number: "))
+    if greatest == 0 or number > greatest:
+        greatest = number
+    else:
+        smallest = number
+        
+
+print("Maximum =", greatest)
+print("minimum =", smallest)

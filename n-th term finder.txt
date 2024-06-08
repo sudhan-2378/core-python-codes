@@ -1,0 +1,5 @@
+n = int(input("enter your Nth term : "))
+print("Nth term is n(n + 1) / 2")
+sum = (n * (n + 1)) / 2
+print("sum of ", n ," natural numbers is...")
+print(sum)

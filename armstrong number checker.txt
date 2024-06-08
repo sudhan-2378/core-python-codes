@@ -1,0 +1,19 @@
+a = int(input("enter your number: "))
+t = a
+sum = 0
+
+while (a != 0):
+    rem = a % 10
+    print("the remainder: ",rem)
+    rem_cube = rem ** 3
+    print("the cube: ",rem_cube)
+    sum = sum + rem_cube
+    print("the sum: ",sum)
+    a = a // 10
+    print()
+
+print("the final sum : ", sum)
+if sum == t:
+    print("the number", t, "is an armstrong number")
+else:
+    print("the number", t, "is not an armstrong number")    

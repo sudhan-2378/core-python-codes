@@ -1,0 +1,13 @@
+print("Welcome to Max Finder...")
+print("Please enter how many numbers you want to enter:")
+
+time = int(input("Enter: "))
+
+greatest = 0
+
+for i in range(time):
+    number = float(input("Enter your number: "))
+    if greatest == 0 or number > greatest:
+        greatest = number
+
+print("Maximum =", greatest)
