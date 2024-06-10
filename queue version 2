@@ -1,0 +1,31 @@
+a = []
+for i in range(100):
+    def add(x):
+        s = input("enter your file : ")
+        a.append(s)
+  
+    print("1. add a new file")
+    print("2. remove the file")
+    print("3. print the history")
+    c = int(input("enter whether you want to add or remove by inputing options 1 or 2 or 3 : "))
+    if c == 1:
+        k = int(input("enter your file : "))
+        a.append(k)
+        print("history : " , a)
+    
+    elif c == 2:
+        j = int(input("enter the file which you want to remove : "))
+        l = a.index(j)
+        if l != 0:
+            print("the file is in", l + 1,". to remove please remove")
+            print(a[0 : l])
+        elif len(a) == 0:
+            print("there is nothing to remove!!")
+        else:
+            a.remove(j)
+            print("history : " , a)
+    elif c == 3:
+        print("history : ", a)
+        
+    else :
+        print("invalid option given")
