@@ -1,0 +1,8 @@
+x = int(input("enter your limit : "))
+def fibonacci_series(x):
+    a,b = 0,1
+    for i in range(x):
+        print(a,end = ",")
+        a,b = b,a + b
+
+fibonacci_series(x)
