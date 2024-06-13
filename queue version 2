@@ -1,3 +1,4 @@
+print("welcome to queue and de-queue")
 a = []
 for i in range(100):
     def add(x):
