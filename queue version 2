@@ -1,10 +1,6 @@
 print("welcome to queue and de-queue")
 a = []
 for i in range(100):
-    def add(x):
-        s = input("enter your file : ")
-        a.append(s)
-  
     print("1. add a new file")
     print("2. remove the file")
     print("3. print the history")
