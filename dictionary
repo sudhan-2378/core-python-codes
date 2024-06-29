@@ -1,0 +1,66 @@
+import random
+actual_marks = []
+print("ENGLISH MARKS :")
+print("---------------")
+eng_marks = {"harsh" : 99,"aadhi" : 50,"karunesh" : 15,"sam" : 19}
+for i in eng_marks.keys():
+    eng_marks[i] = random.randint(1,100)
+print("eng_marks = ",eng_marks)
+print()
+print("LANGUAGE MARKS :")
+print("----------------")
+lang_marks = {i : random.randint(1,100) for i in eng_marks.keys()}
+print("lang_marks = ",lang_marks)
+print()
+print("ACTUAL MARKS :")
+print("--------------")
+print()
+actual_marks.append(eng_marks)
+actual_marks.append(lang_marks)
+print("actual_marks = ",actual_marks)
+print()
+print("TOTAL MARKS :")
+print("-------------")
+b,c = [eng_marks[x] for x in eng_marks],[lang_marks[y] for y in lang_marks]
+total_marks = [b[i] + c[i] for i in range(len(b))]
+print("total_marks = ", total_marks)
+print()
+print("TUPLE-ing PROCESS :")
+print("-------------------")
+lst = list(eng_marks.keys())
+list_of_name_sub_total = []
+for i in lst:
+    tuple1 = (i,"english","languge","total")
+    list_of_name_sub_total.append(tuple1)
+print("list_of_name_sub_total = ",list_of_name_sub_total)
+print()
+print("DICTIONARY USING TUPLE AS KEY :")
+print("-------------------------------")
+class_marks = {}
+for i in list_of_name_sub_total:
+    class_marks[i] = None
+print("class_marks =", class_marks)
+print()
+print("UPDATING LIST AS VALUES FOR THE DICTIONARY:")
+print("-------------------------------------------")
+english = list(eng_marks.values())
+language = list(lang_marks.values())
+class_marks.clear()
+for i in range(len(english)):
+    j = list_of_name_sub_total[i]
+    class_marks[j] = [english[i], language[i], total_marks[i]]
+print("class_marks = ",class_marks)
+print()
+print("ADDING REMARKS:")
+print("---------------")
+for i in range(len(english)):
+    j = list_of_name_sub_total[i]
+    p = [english[i], language[i], total_marks[i]]
+    class_marks[j] = p
+    if total_marks[i] >= 120:
+        p.append("kutty pattas")
+    elif total_marks[i] >= 100:
+        p.append("good student")
+    else:
+        p.append("slow boomer")
+print("class_marks = ",class_marks)
