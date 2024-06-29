@@ -1,0 +1,35 @@
+import random
+actual_marks = []
+eng_marks = {"harsh" : 99,"aadhi" : 50,"karunesh" : 15,"sam" : 19}
+for i in eng_marks.keys():
+    eng_marks[i] = random.randint(1,100)
+    lang_marks = {i : random.randint(1,100) for i in eng_marks.keys()}
+print("eng_marks = ",eng_marks)
+print()
+print("lang_marks = ",lang_marks)
+print()
+actual_marks.append(eng_marks)
+actual_marks.append(lang_marks)
+print("actual_marks = ",actual_marks)
+print()
+total_marks = [eng_marks[i] + lang_marks[i] for i in eng_marks]
+print("total_marks = ", total_marks)
+print()
+list_of_name_sub_total = []
+for i in eng_marks.keys():
+    tuple1 = (i,"english","languge","total")
+    list_of_name_sub_total.append(tuple1)
+print("list_of_name_sub_total = ",list_of_name_sub_total)
+print()
+class_marks = {}
+class_marks = {list_of_name_sub_total[i] : None for i in range(len(list_of_name_sub_total))}
+print("class_marks =", class_marks)
+print()
+english = list(eng_marks.values())
+language = list(lang_marks.values())
+class_marks.clear()
+class_marks = {list_of_name_sub_total[i]: [english[i], language[i], total_marks[i]] for i in range(len(english))}
+print("class_marks = ",class_marks)
+print()
+class_marks = {list_of_name_sub_total[i]: [english[i], language[i], total_marks[i], "kutty pattas" if total_marks[i] >= 120 else "good student" if total_marks[i] >= 100 else "slow boomer"] for i in range(len(english))}
+print("class_marks = ",class_marks)
